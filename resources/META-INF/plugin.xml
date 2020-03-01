@@ -27,7 +27,7 @@
     <actions>
         <!-- Add your actions here -->
         <action id="HmPlugins.HelloTest"
-                class="com.janita.plugin.HelloTestAction"
+                class="com.janita.plugin.test.HelloTestAction"
                 text="HelloAction"
                 description="My first plugin test action">
             <!--添加该功能到编辑菜单edit下面到redo后面-->

@@ -1,4 +1,4 @@
-package com.janita.plugin;
+package com.janita.plugin.test;
 
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
