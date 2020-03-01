@@ -4,11 +4,11 @@
     <version>1.0</version>
     <vendor email="zhucj@yourcompany.com" url="http://www.janita.com">janita</vendor>
 
-    <description><![CDATA[fdfdsfdfsdfsdfsdfsdfsfsdfsdfdsffdfdsfdfsdfsdfsdfsdfsfsdfsdfd
-  sffdfdsfdfsdfsdfsdfsdfsfsdfsdfdsffdfdsfdfsdfsdfsdfsdfsfsdfsdfdsf]]></description>
+    <description><![CDATA[测试插件测试插件测试插件测试插件测试插件测试插件测试插件测试插件测试插件测试插件测试插件测试插件测试
+    插件测试插件测试插件测试插件测试插件测试插件测试插件测试插件测试插件测试插件测试插件测试插件测试插件测试插件测试插件测试插件]]></description>
 
-    <change-notes><![CDATA[fdfdsfdfsdfsdfsdfsdfsfsdfsdfdsffdfdsfdfsdfsdfsdfsdfsfsdfsdfd
-  sffdfdsfdfsdfsdfsdfsdfsfsdfsdfdsffdfdsfdfsdfsdfsdfsdfsfsdfsdfdsf]]>
+    <change-notes><![CDATA[测试插件测试插件测试插件测试插件测试插件测试插件测试插件测试插件测试插件测试插件测试插件测试插件测试
+    插件测试插件测试插件测试插件测试插件测试插件测试插件测试插件测试插件测试插件测试插件测试插件测试插件测试插件测试插件测试插件]]>
     </change-notes>
 
     <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
