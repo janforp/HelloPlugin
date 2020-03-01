@@ -35,6 +35,13 @@
             <!--开机键是command + H-->
             <keyboard-shortcut keymap="$default" first-keystroke="meta H"/>
         </action>
+
+        <action id="HmPlugins.TestTranslateAction"
+                class="com.janita.plugin.translate.TestTranslateAction"
+                text="TestTranslateAction"
+                description="TestTranslateAction">
+            <add-to-group group-id="CodeMenu" anchor="after" relative-to-action="Generate"/>
+        </action>
     </actions>
 
 </idea-plugin>
