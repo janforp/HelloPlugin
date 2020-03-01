@@ -73,8 +73,8 @@ public class TestTranslateAction extends AnAction {
         //pop弹窗
         JBPopupFactory factory = JBPopupFactory.getInstance();
         BalloonBuilder builder = factory.createHtmlTextBalloonBuilder(translationResult.toString(),
-                null, new Color(188, 238, 188),
-                new Color(73, 120, 73), null);
+                null, new JBColor(new Color(188, 238, 188),
+                        new Color(73, 120, 73)), null);
         //        无操作5s隐藏,
         builder.createBalloon();
         builder.setFadeoutTime(5000L)
