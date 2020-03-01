@@ -26,6 +26,15 @@
 
     <actions>
         <!-- Add your actions here -->
+        <action id="HmPlugins.HelloTest"
+                class="com.janita.plugin.HelloTestAction"
+                text="HelloAction"
+                description="My first plugin test action">
+            <!--添加该功能到编辑菜单edit下面到redo后面-->
+            <add-to-group group-id="EditMenu" anchor="after" relative-to-action="$Redo"/>
+            <!--开机键是command + H-->
+            <keyboard-shortcut keymap="$default" first-keystroke="meta H"/>
+        </action>
     </actions>
 
 </idea-plugin>
