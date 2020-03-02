@@ -9,10 +9,6 @@ import com.intellij.openapi.editor.Editor;
 import com.intellij.openapi.editor.SelectionModel;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.ui.Messages;
-import com.intellij.openapi.ui.popup.Balloon;
-import com.intellij.openapi.ui.popup.BalloonBuilder;
-import com.intellij.openapi.ui.popup.JBPopupFactory;
-import com.intellij.ui.JBColor;
 import com.janita.plugin.domain.TranslationResult;
 import com.zhy.http.okhttp.OkHttpUtils;
 import com.zhy.http.okhttp.callback.StringCallback;
@@ -20,7 +16,7 @@ import okhttp3.Call;
 import org.apache.commons.lang.StringUtils;
 import org.jetbrains.annotations.NotNull;
 
-import java.awt.*;
+//import com.intellij.ui.JBColor;
 
 /**
  * @author zhucj
@@ -62,7 +58,7 @@ public class TestTranslateAction extends AnAction {
             @Override
             public void onResponse(String s, int i) {
                 TranslationResult translationResult = gson.fromJson(s, TranslationResult.class);
-                ApplicationManager.getApplication().invokeLater(() -> showPop(translationResult, editor));
+                ApplicationManager.getApplication().invokeLater(() -> showPop(project, editor, translationResult));
             }
         });
     }
@@ -70,17 +66,20 @@ public class TestTranslateAction extends AnAction {
     /**
      * 显示气泡
      */
-    private void showPop(TranslationResult translationResult, Editor editor) {
+    private void showPop(Project project, Editor editor, TranslationResult translationResult) {
+        Messages.showMessageDialog(project, translationResult.toString(), "翻译结果", null);
+
+        //下面的代码在201803版本的idea上可以执行
         //pop弹窗
-        JBPopupFactory factory = JBPopupFactory.getInstance();
-        BalloonBuilder builder = factory.createHtmlTextBalloonBuilder(translationResult.toString(),
-                null, new JBColor(new Color(188, 238, 188),
-                        new Color(73, 120, 73)), null);
+        //        JBPopupFactory factory = JBPopupFactory.getInstance();
+        //        BalloonBuilder builder = factory.createHtmlTextBalloonBuilder(translationResult.toString(),
+        //                null, new JBColor(new Color(188, 238, 188),
+        //                        new Color(73, 120, 73)), null);
         //        无操作5s隐藏,
-        builder.createBalloon();
-        builder.setFadeoutTime(5000L)
-                .createBalloon()
-                .show(factory.guessBestPopupLocation(editor), Balloon.Position.below);
+        //        builder.createBalloon();
+        //        builder.setFadeoutTime(5000L)
+        //                .createBalloon()
+        //                .show(factory.guessBestPopupLocation(editor), Balloon.Position.below);
     }
 
 }
